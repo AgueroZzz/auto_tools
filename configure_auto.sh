@@ -1,0 +1,21 @@
+#!/bin/sh
+./configure \
+-prefix /opt/arm_qt \
+-xplatform linux-aarch64-gnu-g++ \
+-skip qtvirtualkeyboard \
+-opensource \
+-release \
+-make libs \
+-pch \
+-qt-libjpeg \
+-qt-libpng \
+-qt-zlib \
+-no-opengl \
+-no-sse2 \
+-no-openssl \
+-no-cups \
+-no-glib \
+-no-dbus \
+-no-xcb \
+-no-separate-debug-info \
+-nomake examples -nomake tools
