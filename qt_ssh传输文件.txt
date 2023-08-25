@@ -1,0 +1,3 @@
+-i /home/wxy/.ssh/id_rsa.pub /home/wxy/Qt_demo/build-demo-ARM-Debug/demo ubuntu@192.168.1.18:-i /home/wxy/.ssh/id_rsa.pub /home/wxy/Qt_demo/build-demo-ARM-Debug/demo ubuntu@192.168.1.18:/home/ubuntu/Downloa
+
+scp -i <本地公钥存储地址> <本地构建文件地址> username@address:<服务器文件运行地址>
