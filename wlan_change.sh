@@ -1,14 +1,16 @@
 #!/bin/bash
 
-if [ $# -ne 1 ]; then
-    echo "Usage: $0 <lan1_ip>"
-    exit 1
-fi
+# 获取传入的lan1 IP地址
+lan1_ip=$1 
 
-lan1_ip="$1"
+lan2_ip=$2
+# 配置lan1 IP地址 
+sudo ifconfig eth0 $lan1_ip
 
-# 修改LAN1口的IP地址
-sudo ifconfig lan1 "$lan1_ip" netmask 255.255.255.0
+sudo inconfig eth1 $lan2_ip
 
-# 配置LAN2口为127.0.0.1
-sudo ifconfig lan2 127.0.0.1 netmask 255.0.0.0
+# 打印lan1 IP地址信息
+ifconfig eth0 | grep 'inet addr'
+
+# 打印lan2 IP地址信息
+ifconfig eth1 | grep 'inet addr'
